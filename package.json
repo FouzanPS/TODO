@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "todo",
+  "description": "Live demo -> https://luxury-syrniki-667c5f.netlify.app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
