@@ -19,6 +19,9 @@
     padding-top: 5px;
     border-top: solid 2px #178d9d;
 }
+.wrap{
+    width:80%;
+}
 .header{
     background-color: #FFDDCC;
     padding: 5px ;
