@@ -134,7 +134,7 @@ input[type="checkbox"]:checked + label {
     font-size: 28px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .tasks-list {
         width: 90%;
         height: 70%;
@@ -148,5 +148,10 @@ input[type="checkbox"]:checked + label {
     }
     input[type="text"]{
         margin-right: 2px;
+    }
+    .button-38{
+        position: absolute;
+        top:20px;
+        left:5px;
     }
 }

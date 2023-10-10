@@ -11,20 +11,14 @@ var time = date + ' ' + month + ', ' + day;
 document.querySelector("h1").innerHTML=time;
 
 
-let todo = [];
+// let todo = [];
 const form = document.querySelector('form');
 const input = document.querySelector('#user-tasks');
 const tasksList = document.querySelector('.tasks-list');
 
-// Add event listener to form submit
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
-
-  const task = input.value; // Get the task from input value
-
-  if (task.trim() !== '') { // Check if task is not empty
-    todo.push(task.trim());
-
+function display(){
+  const todo = JSON.parse(localStorage.getItem('tasks'));
+  todo.forEach(function(task){
     const maindiv = document.createElement('div');
     maindiv.classList.add('check');
 
@@ -49,11 +43,14 @@ form.addEventListener('submit', function(event) {
     </svg>`
     button.style.float = 'right';
     button.onclick = function() {
+        const pos = todo.indexOf(task);
+        console.log(todo);
+        console.log(pos);
+        let eg = todo.splice(pos, 1);
+        localStorage.setItem('tasks',JSON.stringify(todo));
+        console.log(eg);
         maindiv.remove();
     };
-    
-
-    
     checkboxDiv.appendChild(checkbox);
     checkboxDiv.appendChild(label);
     checkboxDiv.appendChild(button);
@@ -61,11 +58,20 @@ form.addEventListener('submit', function(event) {
     
 
     tasksList.appendChild(maindiv);
+  })
+}
 
-    input.value = ''; // Clear the input field
-   }
-});
-
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let data = input.value;
+  if(data.trim()!=='') {
+    const todo = JSON.parse(localStorage.getItem('tasks')) || [];
+    todo.push(data.trim());
+    localStorage.setItem('tasks', JSON.stringify(todo));
+    input.value = '';
+  }
+  display();
+})
 
 
 
