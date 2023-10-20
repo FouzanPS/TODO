@@ -1,3 +1,3 @@
 # TODO
 
-Have to add saving features for the tasks.
+Have to add some features for the tasks.
