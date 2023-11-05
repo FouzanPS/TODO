@@ -1,3 +1,3 @@
 # TODO
 
-Have to add some features for the tasks.
+Still have a lot of work to do on this.
