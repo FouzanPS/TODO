@@ -28,8 +28,6 @@ A simple Todo List web application that uses Web API to store tasks in the web b
    - Start managing your tasks
 
 3. How it Works:
-  - The application utilizes Web API to interact with the local storage of the web browser.
+  - The application utilizes Web API to interact with the localstorage of the web browser.
   - Tasks are stored as objects in local storage with details such as task name and completion status.
 
-## Note
-** Contributions are welcome! Feel free to open issues and submit pull requests.
